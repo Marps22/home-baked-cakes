@@ -1,6 +1,7 @@
 from PIL import Image
 import requests
 import streamlit as st
+from streamlit_lottie import st_lottie
 
 st.set_page_config(page_title="Sweet Home Bakes", page_icon=":🍰:", layout="wide")
 
@@ -147,21 +148,3 @@ with st.container():
         st.markdown(contact_form, unsafe_allow_html=True)
     with right_column:
         st.title("THANK YOU AND HAVE A GOOD DAY!")
-
-
-# Primary accent for interactive elements
-primaryColor = '#E694FF'
-
-# Background color for the main content area
-backgroundColor = '#00172B'
-
-# Background color for sidebar and most interactive widgets
-secondaryBackgroundColor = '#0083B8'
-
-# Color used for almost all text
-textColor = '#FFFFFF'
-
-# Font family for all text in the app, except code blocks
-# Accepted values (serif | sans serif | monospace)
-# Default: "sans serif"
-font = "sans serif"
