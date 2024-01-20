@@ -1,10 +1,28 @@
 from PIL import Image
 import requests
 import streamlit as st
+from streamlit_lottie import st_lottie
 
 st.set_page_config(page_title="Sweet Home Bakes", page_icon=":🍰:", layout="wide")
 
+
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+
+# Use Local CSS
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
+local_css("C:/Users/ASUS/Desktop/style/Stylecodes.txt")
+
 # --- LOAD ASSETS ---
+lottie_coding = load_lottieurl("https://lottie.host/0a93c91a-9514-4eeb-8c15-d4c9c626ae51/PcWSOf1Kjl.json")
 img_contact_form = Image.open("C:/Users/ASUS/Desktop/images/cake_one.jpg")
 img_lottie_animation = Image.open("C:/Users/ASUS/Desktop/images/cake_two.png.jpg")
 img_cake_yum = Image.open("C:/Users/ASUS/Desktop/images/cake_two.jpg")
