@@ -4,15 +4,6 @@ import streamlit as st
 
 st.set_page_config(page_title="Sweet Home Bakes", page_icon=":🍰:", layout="wide")
 
-
-# Use Local CSS
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-
-local_css("C:/Users/ASUS/Desktop/style/Stylecodes.txt")
-
 # --- LOAD ASSETS ---
 img_contact_form = Image.open("C:/Users/ASUS/Desktop/images/cake_one.jpg")
 img_lottie_animation = Image.open("C:/Users/ASUS/Desktop/images/cake_two.png.jpg")
